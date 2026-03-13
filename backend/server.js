@@ -12,7 +12,6 @@ connectDB();
 // Middleware
 app.use(cors({
   origin: [
-    "http://localhost:3000",
     "https://car-rental-bhm4.vercel.app"
   ],
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
