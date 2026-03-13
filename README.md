@@ -1,70 +1,255 @@
-# Getting Started with Create React App
+# 🚗 Car Rental System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A full-stack **Car Rental Management System** built with the **MERN stack (MongoDB, Express.js, React, Node.js)**.
+The platform allows users to browse available cars, make bookings, and manage rentals, while admins can manage cars, bookings, and users through an admin dashboard.
 
-## Available Scripts.
+---
 
-In the project directory, you can run:
+# 🌐 Live Demo
 
-### `npm start`
+Frontend (Deployed on Vercel)
+https://car-rental-bhm4.vercel.app/
 
-Runs the app in the development mode.  
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Backend API (Deployed on Render)
+https://car-rental-xdz8.onrender.com/
 
-The page will reload if you make edits.  
-You will also see any lint errors in the console.
+---
 
-### `npm test`
+# 🧰 Tech Stack
 
-Launches the test runner in the interactive watch mode.  
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Frontend
 
-### `npm run build`
+* React.js
+* Axios
+* Zustand (state management)
+* TailwindCSS / CSS
+* React Router
 
-Builds the app for production to the `build` folder.  
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Backend
 
-The build is minified and the filenames include the hashes.  
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+* Node.js
+* Express.js
+* MongoDB
+* JWT Authentication
+* REST API
 
 ### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+* Frontend: Vercel
+* Backend: Render
+* Database: MongoDB Atlas
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# ✨ Features
+
+## 👤 User Features
+
+* User registration and login
+* Browse available cars
+* Book cars
+* View booking history
+* User profile management
+
+## 🚘 Car Features
+
+* View car details
+* Check car availability
+* Book a car with selected dates
+
+## 🛠 Admin Features
+
+* Admin dashboard
+* Manage cars (Add / Edit / Delete)
+* Manage bookings
+* Manage users
+* View system statistics
+
+## 🏢 Showroom Features
+
+* Manage showroom cars
+* Track maintenance
+* Manage bookings from showroom
+
+---
+
+# 📂 Project Structure
+
+```
+CAR-rental
+│
+├── backend
+│   ├── config
+│   ├── routes
+│   ├── models
+│   ├── middleware
+│   └── server.js
+│
+├── frontend
+│   ├── src
+│   │   ├── components
+│   │   ├── pages
+│   │   ├── api
+│   │   └── store
+│   └── package.json
+│
+└── README.md
+```
+
+---
+
+# ⚙️ Installation & Setup
+
+## 1️⃣ Clone the repository
+
+```
+git clone https://github.com/kuppireddybhageerathareddy1110/CAR-rental.git
+cd CAR-rental
+```
+
+---
+
+# Backend Setup
+
+```
+cd backend
+npm install
+```
+
+Create `.env`
+
+```
+PORT=5000
+MONGO_URI=your_mongodb_connection
+JWT_SECRET=your_secret_key
+CLIENT_URL=http://localhost:3000
+```
+
+Run backend
+
+```
+npm start
+```
+
+---
+
+# Frontend Setup
+
+```
+cd frontend
+npm install
+```
+
+Create `.env`
+
+```
+REACT_APP_API_URL=http://localhost:5000/api
+```
+
+Run frontend
+
+```
+npm start
+```
+
+---
+
+# 🔑 API Endpoints
+
+## Auth
+
+```
+POST /api/auth/register
+POST /api/auth/login
+GET /api/auth/me
+```
+
+## Cars
+
+```
+GET /api/cars
+POST /api/cars
+PUT /api/cars/:id
+DELETE /api/cars/:id
+```
+
+## Bookings
+
+```
+GET /api/bookings
+POST /api/bookings
+```
+
+---
+
+# 🔐 Authentication
+
+Authentication is handled using **JWT tokens**.
+
+Flow:
+
+1. User logs in
+2. Server returns JWT token
+3. Token stored in localStorage
+4. Axios interceptor attaches token to requests
+
+---
+
+# 🚀 Deployment
+
+### Frontend
+
+Deployed using **Vercel**
+
+### Backend
+
+Deployed using **Render**
+
+### Environment Variables (Production)
+
+Frontend
+
+```
+REACT_APP_API_URL=https://car-rental-xdz8.onrender.com/api
+```
+
+Backend
+
+```
+MONGO_URI=your_mongodb_atlas_uri
+JWT_SECRET=your_secret
+CLIENT_URL=https://car-rental-bhm4.vercel.app
+```
+
+---
+
+# 📸 Screenshots
+
+You can add screenshots of:
+
+* Home page
+* Car listing
+* Booking page
+* Admin dashboard
+
+---
+
+# 🤝 Contributing
+
+Pull requests are welcome.
+For major changes, please open an issue first.
+
+---
+
+# 📄 License
+
+This project is licensed under the MIT License.
+
+---
+
+# 👨‍💻 Author
+
+**Bhageeratha Reddy**
+
+GitHub:
+https://github.com/kuppireddybhageerathareddy1110
